@@ -101,6 +101,15 @@ BOOL CMainDlg::OnInitDialog()
 
 	// TODO: Add extra initialization here
 
+	m_pdlgScroll = new CSeconddlg(this);
+
+	CRect rc;
+	GetDlgItem(IDC_PLACEHOLDER)->GetWindowRect(rc);
+	ScreenToClient(&rc);
+
+	m_pdlgScroll->MoveWindow(rc);
+
+
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
