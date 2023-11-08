@@ -35,4 +35,8 @@ public:
 	CPoint m_ptDragPoint;
 	int m_nScrollPos;
 	int m_nCurHeight;
+	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg BOOL OnMouseWheel(UINT nFlags, short zDelta, CPoint pt);
+	afx_msg BOOL OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);
+	void EndDrag();
 };
